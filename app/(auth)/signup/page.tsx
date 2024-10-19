@@ -14,7 +14,7 @@ export default function SignupPage(){
 
             <Button color="primary">Iniciar Sesión</Button>
             <p className="text-white">
-                ¿Ya tienes una cuenta? <Link href='/login' className="text-orange-200 underline">Inicia sesión</Link>
+                ¿Ya tienes una cuenta? <Link href='/login' className="text-orange-200 underline">Registrate</Link>
             </p>
             </div>
         </div>
