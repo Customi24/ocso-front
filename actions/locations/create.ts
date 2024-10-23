@@ -2,6 +2,7 @@
 import axios from "axios";
 import { cookies } from "next/headers";
 import { TOKEN_NAME, API_URL } from "@/constants";
+import { authHeaders } from "@/helpers/authHeaders";
 
 export async function createLocation(formData: FormData):Promise<void> {
     const token = cookies().get(TOKEN_NAME)?.value
@@ -28,7 +29,7 @@ export async function createLocation(formData: FormData):Promise<void> {
         ...location
     }, {
         headers: {
-            Authorization: `Bearer ${token}`
+            ...authHeaders()
         }
     })
 }
