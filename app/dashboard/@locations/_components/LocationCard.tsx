@@ -10,21 +10,21 @@ export default async function LocationCard({ store }: { store: string | string[]
         headers: {
             ...authHeaders()
         },
-        next:{
-            tags: ["dahsboard:locations",`dahsboard:locations:${store}`]
+        next: {
+            tags: ["dahsboard:locations", `dahsboard:locations:${store}`]
         }
     });
     const data: Location = await response.json()
     return (
         <Card>
             <CardHeader>
-                <p className="w-full">{data.locationName}</p>
+                <b className="w-full text-2xl">{data.locationName}</b>
             </CardHeader>
             <Divider />
-            <CardBody>
+            <CardBody className="flex flex-col w-full items-center">
                 <p className="w-full">
-                    Manager:
-                    <Link href={{ pathname: `/dashboard/employees` }}>
+                    Manager:{" "}
+                    <Link href={{ pathname: `/dashboard/managers/${data.manager?.managerId}` }}>
                         <b>{data.manager?.managerFullName}</b>
                     </Link>
                 </p>
