@@ -3,8 +3,7 @@ import { Modal, ModalContent, ModalBody, Button, useDisclosure } from "@nextui-o
 import { ReactNode } from "react";
 import { LuPencil } from "react-icons/lu";
 
-export default function UpdateLocation({ children, store }: { children: ReactNode, store: string | string[] | undefined }) {
-    if (!store) return <div />;
+export default function UpdateManager({ children }: { children: ReactNode}) {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     return (
