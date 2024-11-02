@@ -14,27 +14,39 @@ export default async function FormUpdateManager({ manager }: { manager: Manager 
     })
     const stores = await responseStores.json()
     return (
-        <form action={updateManagerWithId} className="bg-orange-400 rounded-md">
+        <form action={updateManagerWithId} className="bg-orange-400 rounded-md flex felx-col flex-grow-0 gap-2">
             <h1>Actualizar Manager</h1>
             <Input
+                required={true}
+                isRequired
+                label="Nombre completo"
                 defaultValue={manager.managerFullName}
                 placeholder="Fernando Morales"
                 name="managerFullName"
             />
             <Input
+                required={true}
+                isRequired
+                label="Correo electronico"
                 defaultValue={manager.managerEmail}
                 placeholder="fermanager@ocso.com"
                 name="managerEmail"
             />
             <Input
+                required={true}
+                isRequired
+                label="Salario"
                 defaultValue={String(manager.managerSalary)}
-                placeholder="fermanager@ocso.com"
-                name="15000"
+                placeholder="15000"
+                name="managerSalary"
             />
             <Input
+                required={true}
+                isRequired
+                label="Número de teléfono"
                 defaultValue={manager.managerPhoneNumber}
-                placeholder="fermanager@ocso.com"
-                name="4112105549"
+                placeholder="4111238213"
+                name="managerPhoneNumber"
             />
             <SelectStore stores={stores} defaultStore={manager?.location?.locationId}/>
             <Button color="primary" type="submit">
