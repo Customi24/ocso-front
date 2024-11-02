@@ -22,10 +22,10 @@ export default async function LocationCard({ store }: { store: string | string[]
             </CardHeader>
             <Divider />
             <CardBody className="flex flex-col w-full items-center">
-                <p className="w-full">
+                <p className="w-full ">
                     Manager:{" "}
                     <Link href={{ pathname: `/dashboard/managers/${data.manager?.managerId}` }}>
-                        <b>{data.manager?.managerFullName}</b>
+                        <b className="underline">{data.manager?.managerFullName}</b>
                     </Link>
                 </p>
             </CardBody>
