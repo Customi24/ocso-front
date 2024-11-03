@@ -12,9 +12,9 @@ export default function SignupPage(){
         </div>
             <div className="flex flex-col item-center gap-2">
 
-            <Button color="primary">Iniciar Sesión</Button>
+            <Button color="primary">Registrarse</Button>
             <p className="text-white">
-                ¿Ya tienes una cuenta? <Link href='/login' className="text-orange-200 underline">Registrate</Link>
+                ¿Ya tienes una cuenta? <Link href='/login' className="text-orange-200 underline">Iniciar Sesión</Link>
             </p>
             </div>
         </div>

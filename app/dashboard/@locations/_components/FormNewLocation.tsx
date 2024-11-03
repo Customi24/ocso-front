@@ -4,6 +4,7 @@ import { API_URL } from "@/constants";
 import SelectManager from "./SelectManager";
 import { authHeaders } from "@/helpers/authHeaders";
 import { Location, Manager } from "@/entities";
+import { Button } from "@nextui-org/react";
 
 export default async function FormNewLocation({store}: {store: string | string[] | undefined}) {
     if (store) return null;
@@ -33,7 +34,7 @@ export default async function FormNewLocation({store}: {store: string | string[]
             <Input required={true} label="Latitud" placeholder="120"name="locationLat" />
             <Input required={true} label="Longitud" placeholder="20" name="locationLng" />
             <SelectManager managers={dataManagers} locations={dataLocations}/>
-            <button type="submit" color="primary">Subir</button>
+            <Button type="submit" color="primary">Subir</Button>
         </form>
     );
 }

@@ -1,10 +1,9 @@
-
 'use client';
 import { Input, Button } from "@nextui-org/react"
 import Link from "next/link"
 import { API_URL } from "@/constants";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
     const [submitting, setSubmitting] = useState(false)
@@ -20,8 +19,14 @@ export default function LoginPage() {
             const response = await fetch(`${API_URL}/auth/login`, {
                 method: "POST",
                 body: JSON.stringify(authData),
+                headers:{
+                    "content-type": 'application/json'
+                },
                 credentials: 'include',
-            })
+
+            });
+            const data = await response.json();
+            console.log('Response data:', data);
             if (response.status == 201) router.push('/dashboard');
             setSubmitting(false)
         } catch (e) {
