@@ -34,7 +34,7 @@ export interface Provider{
     providerName: string;
     providerEmail: string;
     providerPhoneNumber: string;
-    products: Product[];
+    products: Product[]
 }
 
 export interface Product{
@@ -42,5 +42,5 @@ export interface Product{
     productName: string;
     price: number;
     countSeal: number;
-    provider: Provider;
+    provider: Provider
 }

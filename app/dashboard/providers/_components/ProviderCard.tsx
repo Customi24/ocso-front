@@ -12,9 +12,10 @@ export default function ProviderCard({ provider }: { provider: Provider }) {
                 <p> Numero de telefono: </p>
                 <b>{provider.providerPhoneNumber}</b>
                 {
-                    provider?.products?.length != 0 ? (
+                    provider?.products?.length !== 0 ? (
                         <p>Tiene <b>{provider?.products?.length}</b> producto{provider.products.length > 1 ? "s" : ""} </p>
-                    ) : (<p> No tiene productos</p>
+                    ) : (
+                        <p> No tiene productos</p>
                     )}
             </CardBody>
         </Card>

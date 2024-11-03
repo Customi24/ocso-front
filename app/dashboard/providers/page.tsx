@@ -22,11 +22,9 @@ const ProviderPage = async () => {
     return (
         <div className="flex flex-grow-0 flex-col items-end w-full px-10 pt-10 h-[90vh]">
             <CreateProvider>
-                <FormCreateProvider />
+                <FormCreateProvider/>
             </CreateProvider>
-            <Button className="w-fit" color="primary">
-                <LuPlus size="20" />
-            </Button>
+            
             <div className="flex flex-wrap w-full py-20 flex-grow-0 gap-14">
                 {providers?.map((provider: Provider) => (
                     <Link
