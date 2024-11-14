@@ -9,7 +9,6 @@ export default async function updateManager(managerId: string, formData: FormDat
     let manager: any = {};
     for (const key of formData.keys()) {
         manager[key] = formData.get(key);
-
     }
     manager['managerSalary'] = +manager['managerSalary'];
     manager.location = +manager?.location
