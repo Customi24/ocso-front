@@ -13,6 +13,7 @@ export default async function CountManagersPage(){
         }
     });
     const managers: Manager[]  = await response.json()
+    console.log(managers);
     const countNoStore = managers.filter((manager: Manager) => !manager.location).length;
     let max=0;
     let salary = 0;

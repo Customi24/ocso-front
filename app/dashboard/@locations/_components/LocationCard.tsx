@@ -11,7 +11,7 @@ export default async function LocationCard({ store }: { store: string | string[]
             ...authHeaders()
         },
         next: {
-            tags: ["dahsboard:locations", `dahsboard:locations:${store}`]
+            tags: ["dashboard:locations", `dashboard:locations:${store}`]
         }
     });
     const data: Location = await response.json()

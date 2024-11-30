@@ -3,8 +3,10 @@ import { Select, SelectItem } from "@nextui-org/react";
 import { Location } from "@/entities";
 
 export default function SelectStore({ stores, defaultStore }: { stores: Location[], defaultStore?: number }) {
+    if (!stores) return <p>No hay tiendas</p>
+    console.log(stores)
     const disabledStores = stores.map((store: Location) => {
-        if (store.manager !== undefined && store.locationId !== defaultStore) {
+        if (store.manager != undefined && store.locationId != defaultStore) {
             return String(store.locationId)
         }
     }).filter((storeId)=> storeId !== undefined )

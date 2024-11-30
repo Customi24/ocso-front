@@ -7,7 +7,7 @@ import SelectStore from "./SelectStore"
 
 export default async function FormUpdateManager({ manager }: { manager: Manager }) {
     const updateManagerWithId = updateManager.bind(null, manager.managerId)
-    const responseStores = await fetch(`${API_URL}/location`,{
+    const responseStores = await fetch(`${API_URL}/locations`,{
         headers: {
             ...authHeaders()
         }

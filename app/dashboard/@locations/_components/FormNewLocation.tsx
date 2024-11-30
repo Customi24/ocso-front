@@ -13,7 +13,7 @@ export default async function FormNewLocation({store}: {store: string | string[]
             ...authHeaders()
         },
         next:{
-            tags: ["dahsboard:managers"]
+            tags: ["dashboard:managers"]
         }
     })
     const dataManagers: Manager[] = await responseManagers.json()
@@ -22,7 +22,7 @@ export default async function FormNewLocation({store}: {store: string | string[]
             ...authHeaders()
         },
         next:{
-            tags: ["dahsboard:locations"]
+            tags: ["dashboard:locations"]
         }
     })
     const dataLocations: Location[] = await responseLocation.json()

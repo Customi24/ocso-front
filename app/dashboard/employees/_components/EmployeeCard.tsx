@@ -13,7 +13,7 @@ export default function EmployeeCard({ employee }: { employee: Employee }) {
                 <p>Número de teléfono: <b>{employee.employeePhoneNumber}</b></p>
             </CardBody>
             <CardFooter className="absolute bottom-0 py-2 h-14">
-                <Link href={`/dahsboard/employees/${employee.employeeId}`}>
+                <Link href={`/dashboard/employees/${employee.employeeId}`}>
                 <Button variant="ghost"> Actualizar datos</Button>
                 </Link>
             </CardFooter>

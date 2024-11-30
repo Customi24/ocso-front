@@ -16,7 +16,7 @@ export interface Employee {
     employeeEmail: string;
     employeePhoto?: string;
     location?: Location;
-    user?: any;
+    user?: User;
 }
 
 export interface Manager{
@@ -26,7 +26,7 @@ export interface Manager{
     managerEmail: string;
     managerPhoneNumber: string;
     location: Location;
-    user: any;
+    user: User;
 }
 
 export interface Provider{
